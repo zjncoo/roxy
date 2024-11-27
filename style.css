@@ -1,114 +1,104 @@
 body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fdfce9;
-  }
-  
-  .header {
-    background-color: #1E1E1E;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .main-title {
-    font-size: 50px;
-    margin: 0;
-  }
-  
-  .highlight {
-    color: #D32F2F;
-  }
-  
-  .intro {
-    font-size: 20px;
-  }
-  
-  .container {
-    margin: 20px;
-  }
-  
-  .question {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    font-size: 16px;
-    margin: 5px 0;
-  }
-  
-  input[type="radio"] {
-    margin-right: 10px;
-  }
-  
-  .btn {
-    background-color: #D32F2F;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .btn:hover {
-    background-color: #B71C1C;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #1E1E1E;
-    color: white;
-  }
-  
-  #canvas-pass {
-    border: 0px solid #000;
-    margin-top: 20px;
-  }
-  
-  #download-pass {
-    display: block;
-    margin-top: 20px;
-    text-align: center;
-    color: #D32F2F;
-    font-weight: bold;
-  }
-  
-  #download-pass:hover {
-    text-decoration: underline;
-  }
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #D32F2F;
+  color: white;
+}
 
-/* Personalizzazione dei pulsanti radio */
+#quiz-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.quiz-step {
+  width: 80%;
+}
+
+.question-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.answer-options label {
+  display: block;
+  margin: 10px 0;
+}
+
 input[type="radio"] {
-    appearance: none; /* Rimuove l'aspetto predefinito del browser */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border: 2px solid #FF0000; /* Bordo rosso */
-    border-radius: 50%; /* Forma rotonda */
-    width: 20px;
-    height: 20px;
-    position: relative;
-    margin-right: 10px; /* Spazio tra il pallino e il testo */
-    cursor: pointer;
-    background-color: transparent; /* Sfondo trasparente inizialmente */
-    transition: background-color 0.3s, border-color 0.3s; /* Transizione per l'effetto hover */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 2px solid white;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
-/* Quando il radio è selezionato */
 input[type="radio"]:checked {
-    background-color: #FF0000; /* Colore rosso di sfondo quando selezionato */
-    border-color: #FF0000; /* Il bordo diventa rosso */
+  background-color: white;
+  border-color: white;
 }
 
+.hidden {
+  display: none;
+}
 
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #1E1E1E;
+  color: white;
+}
 
-/* Stile quando il radio è disabilitato (opzionale) */
-input[type="radio"]:disabled {
-    border-color: #ccc;
-    background-color: #f0f0f0;
+#download-pass {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  color: #D32F2F;
+  font-weight: bold;
+}
+
+#download-pass:hover {
+  text-decoration: underline;
+}
+
+#quiz-container {
+  display: flex;
+  flex-direction: column; /* Layout verticale */
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.quiz-step {
+  width: 80%;
+}
+
+#question-counter {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.answer-options {
+  display: flex;
+  flex-direction: column; /* Disposizione verticale per le risposte */
+  gap: 15px; /* Spazio tra le opzioni */
+  margin-top: 20px;
+}
+
+.answer-options label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }

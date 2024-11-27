@@ -8,86 +8,43 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="header">
-    <h1 class="main-title"><span class="highlight">ROXY</span></h1>
-    <p class="intro">Answer 8 bold questions to see if you're as fearless as you think.</p>
-  </header>
-  <div class="container">
-    <form id="quiz-form">
-      <!-- Questions -->
-      <div class="question">
-        <p>1. If you find a cake in the fridge without a name on it, what do you do?</p>
-        <label><input type="radio" name="q1" value="a"> Eat it and leave a note: "It was delicious!"</label>
-        <label><input type="radio" name="q1" value="b"> Ask whose it is, but only after tasting it.</label>
-        <label><input type="radio" name="q1" value="c"> Ignore the cake, it’s not yours.</label>
-      </div>
-      <div class="question">
-        <p>2. You’re told to dress “fancy” for a dinner. How do you show up?</p>
-        <label><input type="radio" name="q2" value="a"> In silk pajamas, holding a glass of wine.</label>
-        <label><input type="radio" name="q2" value="b"> In a black outfit, but with ridiculous sunglasses.</label>
-        <label><input type="radio" name="q2" value="c"> In a classic suit and tie (or equivalent).</label>
-      </div>
-      <div class="question">
-        <p>3. A friend asks you for relationship advice, but their partner is a disaster. What do you do?</p>
-        <label><input type="radio" name="q3" value="a"> Tell them: “Dump them and let’s order pizza.”</label>
-        <label><input type="radio" name="q3" value="b"> Try to be diplomatic, but hint at your thoughts.</label>
-        <label><input type="radio" name="q3" value="c"> Give neutral advice and hope they figure it out.</label>
-      </div>
-      <div class="question">
-        <p>4. You’re invited to an “80s” themed party. How do you show up?</p>
-        <label><input type="radio" name="q4" value="a"> Dressed like a rockstar… but in full 70s style.</label>
-        <label><input type="radio" name="q4" value="b"> In an impeccable 80s look, but with a bold twist.</label>
-        <label><input type="radio" name="q4" value="c"> Try to respect the theme without going overboard.</label>
-      </div>
-      <div class="question">
-        <p>5. Your meal at a restaurant isn’t good. What do you do?</p>
-        <label><input type="radio" name="q5" value="a"> Ask the waiter if the chef got into a fight with flavor.</label>
-        <label><input type="radio" name="q5" value="b"> Politely point it out and request a solution.</label>
-        <label><input type="radio" name="q5" value="c"> Say nothing and make do.</label>
-      </div>
-      <div class="question">
-        <p>6. During an important meeting, your phone rings with a ridiculous ringtone. How do you react?</p>
-        <label><input type="radio" name="q6" value="a"> Answer and say: “Sorry, it’s the president, they’ll have to wait.”</label>
-        <label><input type="radio" name="q6" value="b"> Turn it off with an embarrassed smile.</label>
-        <label><input type="radio" name="q6" value="c"> Turn it off and apologize seriously.</label>
-      </div>
-      <div class="question">
-        <p>7. Someone you can’t stand gives you a compliment. How do you respond?</p>
-        <label><input type="radio" name="q7" value="a"> “Wow, thanks! I didn’t expect that from you.”</label>
-        <label><input type="radio" name="q7" value="b"> “I appreciate it, thanks!”</label>
-        <label><input type="radio" name="q7" value="c"> A simple “thank you” without much emotion.</label>
-      </div>
-      <div class="question">
-        <p>8. You have a free day, no plans, and an unlimited budget. What do you do?</p>
-        <label><input type="radio" name="q8" value="a"> Book a flight to somewhere absurd and go without thinking twice.</label>
-        <label><input type="radio" name="q8" value="b"> Treat yourself to a day of pure luxury and relaxation.</label>
-        <label><input type="radio" name="q8" value="c"> Plan something calm and enjoyable.</label>
-      </div>
-      <button type="submit" class="btn">See Results</button>
+  <div id="quiz-container">
+    <!-- Contatore delle domande -->
+    <div id="question-counter"></div>
+  
+    <!-- Testo della domanda -->
+    <h2 id="question-title"></h2>
+  
+    <!-- Opzioni di risposta -->
+    <div id="answer-options"></div>
+  </div>
+  
+  <!-- Risultato -->
+  <div id="result" class="hidden">
+    <h2 id="personality"></h2>
+    <p id="description"></p>
+  </div>
+
+  <div id="result" class="hidden">
+    <h2>Your Result: <span id="personality"></span></h2>
+    <p id="description"></p>
+    <form id="customize-pass-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      <button type="submit" class="btn">Customize Pass</button>
     </form>
-    <div id="result" class="hidden">
-        <h2>Your Result: <span id="personality"></span></h2>
-        <p id="description"></p>
-      
-        <form id="customize-pass-form">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" placeholder="Enter your name" required>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email" required>
-          <button type="submit" class="btn">Customize Pass</button>
-        </form>
-      
-        <div id="custom-pass" class="hidden">
-          <h3>Here's your personalized pass:</h3>
-          <p id="pass-name"></p>
-          <canvas id="canvas-pass" width="851" height="1135"></canvas>
-          <a id="download-pass" href="#" download="assets/PASS_ROXY.png">Download Your Pass</a>
-        </div>
-      </div>
+    <div id="custom-pass" class="hidden">
+      <h3>Here's your personalized pass:</h3>
+      <p id="pass-name"></p>
+      <canvas id="canvas-pass" width="851" height="1135"></canvas>
+      <a id="download-pass" href="#" download="PASS_ROXY.png">Download Your Pass</a>
+    </div>
   </div>
   <footer class="footer">
     <p>&copy; 2024 Are You <span class="highlight">ROXY</span>?</p>
   </footer>
-  <script src="java.js"></script>
+  <script src="quiz.js"></script>
 </body>
 </html>
