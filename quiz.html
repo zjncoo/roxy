@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Are You Roxy?</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="quiz.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -21,30 +21,30 @@
   
   <!-- Risultato -->
   <div id="result" class="hidden">
-    <h2 id="personality"></h2>
-    <p id="description"></p>
-  </div>
-
-  <div id="result" class="hidden">
     <h2>Your Result: <span id="personality"></span></h2>
     <p id="description"></p>
-    <form id="customize-pass-form">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name" required>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    <form id="customize-pass-form" class="hidden">
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
       <button type="submit" class="btn">Customize Pass</button>
     </form>
+
     <div id="custom-pass" class="hidden">
       <h3>Here's your personalized pass:</h3>
       <p id="pass-name"></p>
       <canvas id="canvas-pass" width="851" height="1135"></canvas>
       <a id="download-pass" href="#" download="PASS_ROXY.png">Download Your Pass</a>
+
+      <!-- Aggiungi il link per scaricare l'app -->
+      <a href="https://www.example.com/app-download" target="_blank">
+        <img src="logo.png" alt="App Logo" style="width: 100px; margin-top: 20px;">
+        Scarica la nostra app
+      </a>
     </div>
   </div>
-  <footer class="footer">
-    <p>&copy; 2024 Are You <span class="highlight">ROXY</span>?</p>
-  </footer>
+
   <script src="quiz.js"></script>
 </body>
 </html>

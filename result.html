@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Your Pass</title>
+  <link rel="stylesheet" href="https://use.typekit.net/npp3dgf.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #ffffff;
+      color: #d32f2f; /* Rosso audace */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; /* Per occupare tutta l'altezza */
+      margin: 0;
+    }
+
+    .logo {
+      margin-bottom: 20px;
+      max-width: 100px; /* Logo più piccolo */
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      font-family: "headline-gothic-atf", sans-serif; /* Font specificato */
+    }
+
+    h2, p {
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-top: 30px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      width: 60%;
+    }
+
+    input {
+      margin: 10px 0;
+      padding: 15px;
+      font-size: 16px;
+      font-family: "headline-gothic-atf";
+      width: 80%;
+      max-width: 300px;
+      border: 2px solid #d32f2f; /* Bordo rosso */
+      border-radius: 5px;
+      outline: none;
+      color: #d32f2f;
+    }
+
+    input:focus {
+      border-color: #b71c1c; /* Rosso più intenso per il focus */
+    }
+
+    button {
+      padding: 15px 30px;
+      width: 100%;
+      font-size: 18px;
+      margin-top: 70px;
+      font-weight: bold;
+      font-family: "headline-gothic-atf";
+      cursor: pointer;
+      background-color: #d32f2f; /* Rosso audace */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #b71c1c; /* Rosso più intenso per hover */
+    }
+
+    a {
+      display: block;
+      color: #6f1717; /* Rosso audace */
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 20px;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #b71c1c; /* Rosso più intenso per hover */
+      text-decoration: underline;
+    }
+
+    #link-container {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo con dimensione ridotta -->
+  <img src="assets/logo.svg" alt="Logo" class="logo">
+  <h1>Congratulations, Roxy!</h1>
+  <p>Fill out your details to get your personalized pass and download our app.</p>
+
+  <form id="roxy-form">
+    <input type="text" id="first-name" placeholder="First Name" required><br>
+    <input type="text" id="last-name" placeholder="Last Name" required><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="link-container">
+    <h2>Your Pass is Ready!</h2>
+    <a href="https://www.example.com" target="_blank">Download Your Pass</a>
+    <a href="https://www.example.com/app-download" target="_blank">Download the App</a>
+  </div>
+
+  <script>
+    const form = document.getElementById("roxy-form");
+    const linkContainer = document.getElementById("link-container");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      form.style.display = "none";
+      linkContainer.style.display = "block";
+    });
+  </script>
+
+</body>
+</html>

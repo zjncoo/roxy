@@ -93,7 +93,6 @@ function showQuestion(index) {
   const question = questions[index];
   const questionTitle = document.getElementById("question-title");
   const answerOptions = document.getElementById("answer-options");
-  const questionCounter = document.getElementById("question-counter");
 
   // Aggiorna il contatore delle domande
   questionCounter.textContent = `${index + 1} / ${questions.length}`;
@@ -122,9 +121,12 @@ function handleAnswer(value) {
   }
 
   currentQuestionIndex++;
+
   if (currentQuestionIndex < questions.length) {
     showQuestion(currentQuestionIndex);
-  } else {
+  }
+  // Mostra il risultato solo dopo che l'ultima domanda è stata rispondente
+  else {
     showResult();
   }
 }
@@ -132,19 +134,44 @@ function handleAnswer(value) {
 // Mostra il risultato
 function showResult() {
   let result;
+
   if (score >= 12) {
     result = results.roxy;
+    // Reindirizzamento alla pagina con il form
+    window.location.href = "result.html";
+    return;
   } else if (score >= 8) {
     result = results.almost_roxy;
   } else {
     result = results.not_roxy;
   }
 
+  // Mostra il risultato per gli altri casi
   personalitySpan.textContent = result.title;
   descriptionSpan.textContent = result.description;
 
   quizContainer.classList.add("hidden");
   resultDiv.classList.remove("hidden");
+}
+
+// Funzione per mostrare il modulo di personalizzazione e il link per scaricare l'app
+function showCustomizationForm() {
+  // Mostra il form di personalizzazione
+  const customPassDiv = document.getElementById("custom-pass");
+  const customizePassForm = document.getElementById("customize-pass-form");
+  const downloadLink = document.getElementById("download-pass");
+  const appDownloadLink = document.createElement('a');
+  appDownloadLink.href = "https://www.example.com/app-download"; // Link alla pagina di download dell'app
+  appDownloadLink.textContent = "Scarica la nostra app";
+  appDownloadLink.target = "_blank"; // Apre il link in una nuova finestra
+  appDownloadLink.style.display = "block";
+  appDownloadLink.style.marginTop = "20px";
+  
+  // Aggiungi il link alla pagina di download dell'app
+  customPassDiv.appendChild(appDownloadLink);
+
+  customPassDiv.classList.remove("hidden");
+  customizePassForm.classList.remove("hidden");
 }
 
 // Inizia il quiz

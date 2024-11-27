@@ -1,0 +1,153 @@
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #D32F2F;
+  color: white;
+}
+
+#quiz-container {
+  display: flex;
+  flex-direction: column; /* Layout verticale */
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.quiz-step {
+  width: 80%;
+}
+
+#question-counter {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.question-title {
+  font-size: 28px;
+  padding: 10px;
+}
+
+.answer-options {
+  display: flex;
+  flex-direction: column; /* Risposte una sotto l'altra */
+  gap: 15px; /* Distanza tra le risposte */
+  margin-top: 20px;
+  width: 100%; /* Assicurati che prenda tutta la larghezza */
+  list-style-type: none; /* Rimuove il punto di default */
+  padding: 0; /* Azzera il padding per allineamento */
+}
+
+.answer-options label {
+  cursor: pointer;
+  font-size: 18px; /* Maggiore leggibilità */
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  color: #D32F2F;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.answer-options label:hover {
+  background-color: #f1f1f1;
+  border-color: #D32F2F;
+}
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 2px solid white;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="radio"]:checked {
+  background-color: white;
+  border-color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #1E1E1E;
+  color: white;
+}
+
+#download-pass {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  color: #D32F2F;
+  font-weight: bold;
+}
+
+#download-pass:hover {
+  text-decoration: underline;
+}
+
+#result {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#result h2 {
+  font-size: 24px;
+}
+
+#result p {
+  font-size: 18px;
+}
+
+#customize-pass-form {
+  margin-top: 20px;
+}
+
+#customize-pass-form input {
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#customize-pass-form button {
+  padding: 10px;
+  background-color: #D32F2F;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#customize-pass-form button:hover {
+  background-color: #C2185B;
+}
+
+#custom-pass {
+  margin-top: 20px;
+}
+
+#canvas-pass {
+  margin-top: 20px;
+  border: 1px solid #1E1E1E;
+}
+
+footer .highlight {
+  font-weight: bold;
+}
