@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'headline-gothic-atf', sans-serif;
     background-color: #FF0000; /* Rosso */
     color: white;
     display: flex;
@@ -18,8 +18,8 @@ body {
 }
 
 h1 {
-    font-size: 4rem;
-    font-weight: 700;
+    font-size: 6%;
+    font-weight: 9;
     margin-bottom: 20px;
 }
 
