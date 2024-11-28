@@ -1,9 +1,8 @@
-/* CSS per la pagina Roxy */
 body {
     margin: 0;
     padding: 0;
     font-family: 'headline-gothic-atf', sans-serif;
-    background-color: #FF0000; /* Rosso */
+    background-color: #D51119; /* Rosso */
     color: white;
     display: flex;
     justify-content: center;
@@ -13,8 +12,11 @@ body {
 }
 
 .container {
-    max-width: 100%;
-    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Disposizione verticale */
+    justify-content: center; /* Centra gli elementi verticalmente */
+    align-items: center; /* Centra gli elementi orizzontalmente */
+    text-align: center;
 }
 
 h1 {
@@ -24,18 +26,25 @@ h1 {
 }
 
 .button {
-    background-color: #000000; /* Nero per il pulsante */
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+    font-size: 18px; /* Dimensione del testo */
+    margin-top: 10px;
     text-decoration: none;
-}
+    padding: 15px 20px; /* Spaziatura interna */
+    background-color: transparent; /* Sfondo trasparente */
+    color: white; /* Colore del testo */
+    border: 2px solid white; /* Bordo bianco */
+    border-radius: 0; /* Bordo quadrato */
+    cursor: pointer; /* Cambia il cursore a "mano" */
+    width: fit-content; /* I bottoni occupano tutta la larghezza del contenitore */
+    text-align: center; /* Allinea il testo al centro */
+    transition: background-color 0.3s, transform 0.2s; /* Transizioni morbide */
+    box-sizing: border-box; /* Garantisce che padding e bordo siano inclusi nella larghezza */
+  }
+
 
 .button:hover {
-    background-color: #444444; /* Colore più scuro per hover */
+    background-color: #ffffff; /* Colore più scuro per hover */
+    color: #D51119;
 }
 
 @media (max-width: 600px) {
@@ -56,8 +65,13 @@ h1 {
     text-decoration: none;
     color: #e63946;
     font-weight: bold;
-  }
-  
-  .pass-link:hover {
+}
+
+.pass-link:hover {
     text-decoration: underline;
-  }
+}
+
+.logo {
+    margin-bottom: 20px;
+    max-width: 100px; /* Logo più piccolo */
+}

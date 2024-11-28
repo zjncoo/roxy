@@ -103,12 +103,13 @@ function showQuestion(index) {
   // Resetta le opzioni di risposta
   answerOptions.innerHTML = "";
 
-  // Genera le opzioni di risposta
+  // Genera le opzioni di risposta come bottoni
   question.answers.forEach((answer) => {
-    const label = document.createElement("label");
-    label.innerHTML = `<input type="radio" name="q${index}" value="${answer.value}"> ${answer.text}`;
-    label.addEventListener("click", () => handleAnswer(answer.value));
-    answerOptions.appendChild(label);
+    const button = document.createElement("button");
+    button.textContent = answer.text;
+    button.classList.add("quiz-button"); // Classe per lo stile
+    button.addEventListener("click", () => handleAnswer(answer.value));
+    answerOptions.appendChild(button);
   });
 }
 
