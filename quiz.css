@@ -20,7 +20,7 @@ body {
 
 #question-counter {
   position: absolute;
-  top: 100px;
+  top: 70px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 20px; /* Aumentato dalla dimensione originale */

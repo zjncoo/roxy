@@ -1,66 +1,52 @@
 const questions = [
+  // Existing questions...
+
   {
-    question: "If you find a cake in the fridge without a name on it, what do you do?",
+    question: "What type of music makes you feel most alive during an event?",
     answers: [
-      { text: "Eat it and leave a note: 'It was delicious!'", value: "a" },
-      { text: "Ask whose it is, but only after tasting it.", value: "b" },
-      { text: "Ignore the cake, it’s not yours.", value: "c" },
+      { text: "Electronic and techno, I love the energy it creates!", value: "a" },
+      { text: "Jazz or soul, the vibe is more relaxing and deep.", value: "b" },
+      { text: "Rock and alternative, to feel powerful and full of adrenaline.", value: "c" },
     ],
   },
   {
-    question: "You’re told to dress 'fancy' for a dinner. How do you show up?",
+    question: "What kind of atmosphere do you prefer at an event?",
     answers: [
-      { text: "In silk pajamas, holding a glass of wine.", value: "a" },
-      { text: "In a black outfit, but with ridiculous sunglasses.", value: "b" },
-      { text: "In a classic suit and tie (or equivalent).", value: "c" },
+      { text: "A vibrant atmosphere with colorful lights, where every corner is a surprise.", value: "a" },
+      { text: "An intimate, cozy environment with soft lighting and a warm atmosphere.", value: "b" },
+      { text: "Explosive energy with loud music and people dancing everywhere.", value: "c" },
     ],
   },
   {
-    question: "You see someone struggling to parallel park. What do you do?",
+    question: "What style of architecture attracts you most at an event?",
     answers: [
-      { text: "Hop in their car and park it for them.", value: "a" },
-      { text: "Offer some advice from the sidewalk.", value: "b" },
-      { text: "Ignore them and walk away.", value: "c" },
+      { text: "Modern, minimalist spaces with clean lines and a sense of openness.", value: "a" },
+      { text: "Historic, classical architecture, with an elegant timeless feel.", value: "b" },
+      { text: "Futuristic, avant-garde structures that amaze with their boldness.", value: "c" },
     ],
   },
   {
-    question: "What’s your ideal way to spend a weekend?",
+    question: "What colors would you prefer to dominate at an event?",
     answers: [
-      { text: "Partying until sunrise, every night.", value: "a" },
-      { text: "A mix of outings and time to recharge.", value: "b" },
-      { text: "Reading a book or watching a movie at home.", value: "c" },
+      { text: "Black, silver, and gold, for an elegant and sophisticated touch.", value: "a" },
+      { text: "Warm tones like red, orange, and gold, for a passionate and cozy atmosphere.", value: "b" },
+      { text: "Bright colors like electric blue, purple, and lime green, for a visually stimulating effect.", value: "c" },
     ],
   },
   {
-    question: "You’re at a restaurant, and they bring you the wrong dish. What do you do?",
+    question: "How do you prefer the lighting at an event?",
     answers: [
-      { text: "Eat it anyway and pretend it’s what you wanted.", value: "a" },
-      { text: "Politely tell the waiter and wait for the right dish.", value: "b" },
-      { text: "Get annoyed but say nothing.", value: "c" },
+      { text: "Neon lights, bright and vivid, creating dramatic contrast.", value: "a" },
+      { text: "Soft, warm lighting that makes the space cozy and relaxed.", value: "b" },
+      { text: "Strobe lights flashing to create a festive and dynamic atmosphere.", value: "c" },
     ],
   },
   {
-    question: "How do you prepare for a big presentation?",
+    question: "What type of food and drinks do you expect at an exclusive event?",
     answers: [
-      { text: "Winging it—improv is your strength.", value: "a" },
-      { text: "Practice a bit, but leave room for spontaneity.", value: "b" },
-      { text: "Rehearse every single detail.", value: "c" },
-    ],
-  },
-  {
-    question: "If you could pick a superpower, what would it be?",
-    answers: [
-      { text: "Invisibility, to sneak into places unnoticed.", value: "a" },
-      { text: "Super speed, to get everything done quickly.", value: "b" },
-      { text: "Flying, to enjoy the world from above.", value: "c" },
-    ],
-  },
-  {
-    question: "What’s your go-to drink at a party?",
-    answers: [
-      { text: "Whatever the bartender recommends.", value: "a" },
-      { text: "Something fancy but not too strong.", value: "b" },
-      { text: "A classic soda or water.", value: "c" },
+      { text: "Innovative cocktails and gourmet finger food.", value: "a" },
+      { text: "Classic dishes, but with fresh and high-quality ingredients.", value: "b" },
+      { text: "Street food and energizing drinks, for a non-stop party.", value: "c" },
     ],
   },
 ];
