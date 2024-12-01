@@ -25,7 +25,7 @@ body {
   transform: translateX(-50%);
   font-size: 20px; /* Aumentato dalla dimensione originale */
   font-weight: bold;
-  font-family: "headline-gothic-atf", sans-serif;
+  font-family: "Inter", sans-serif;
   text-transform: uppercase;
   background-color: rgba(0, 0, 0, 0);
   padding: 10px 15px;
@@ -48,6 +48,7 @@ body {
 }
 
 #answer-options {
+  font-family:'Inter', sans-serif;
   display: flex;
   flex-direction: column; /* Disposizione verticale */
   gap: 15px; /* Distanza tra i bottoni */
@@ -63,6 +64,7 @@ body {
 .quiz-button {
   font-size: 18px; /* Dimensione del testo */
   margin-top: 10px;
+  font-family:'Inter', sans-serif;
   padding: 15px 20px; /* Spaziatura interna */
   background-color: transparent; /* Sfondo trasparente */
   color: white; /* Colore del testo */
@@ -158,4 +160,40 @@ footer {
 
 footer .highlight {
   font-weight: bold;
+}
+
+footer {
+  background-color: #D51119;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer p {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: "headline-gothic-atf", sans-serif;
+}
+
+footer a {
+  display: inline-block;
+}
+
+footer img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease-in-out;
+}
+
+footer img:hover {
+  transform: scale(1.1); /* Effetto hover per ingrandire il logo */
 }

@@ -132,25 +132,24 @@ function handleAnswer(value) {
   }
 }
 
-// Mostra il risultato
 function showResult() {
   let result;
 
   if (score >= 12) {
     result = results.roxy;
-    // Reindirizzamento alla pagina con il form
+    // Solo per il caso "ROXY" effettua il reindirizzamento
     window.location.href = "result.html";
-    return;
   } else if (score >= 8) {
     result = results.almost_roxy;
   } else {
     result = results.not_roxy;
   }
 
-  // Mostra il risultato per gli altri casi
+  // Mostra il risultato sulla stessa pagina per "Not Roxy" e "Almost Roxy"
   personalitySpan.textContent = result.title;
   descriptionSpan.textContent = result.description;
 
+  // Nasconde il quiz e mostra il div dei risultati
   quizContainer.classList.add("hidden");
   resultDiv.classList.remove("hidden");
 }

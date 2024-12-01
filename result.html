@@ -5,19 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Get Your Pass</title>
   <link rel="stylesheet" href="https://use.typekit.net/npp3dgf.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       text-align: center;
-      padding: 20px;
+      padding: 0;
       background-color: #ffffff;
-      color: #d32f2f; /* Rosso audace */
+      color: #D51119; /* Rosso audace */
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    
+    }
+
+    .content {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      min-height: 100vh; /* Per occupare tutta l'altezza */
-      margin: 0;
+      flex-grow: 1; /* Fa sì che il div .content occupi il 100% della altezza disponibile */
+      padding: 20px;
+      height: 100vh;
     }
 
     .logo {
@@ -52,14 +61,14 @@
       font-family: "headline-gothic-atf";
       width: 80%;
       max-width: 300px;
-      border: 2px solid #d32f2f; /* Bordo rosso */
+      border: 2px solid #D51119; /* Bordo rosso */
       border-radius: 5px;
       outline: none;
-      color: #d32f2f;
+      color: #D51119;
     }
 
     input:focus {
-      border-color: #b71c1c; /* Rosso più intenso per il focus */
+      border-color: #D51119; /* Rosso più intenso per il focus */
     }
 
     button {
@@ -70,7 +79,7 @@
       font-weight: bold;
       font-family: "headline-gothic-atf";
       cursor: pointer;
-      background-color: #d32f2f; /* Rosso audace */
+      background-color: #D51119; /* Rosso audace */
       color: white;
       border: none;
       border-radius: 5px;
@@ -99,25 +108,63 @@
     #link-container {
       display: none;
     }
+
+    footer {
+      background-color: #D51119;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      width: 100vw;
+      position: relative;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    footer p {
+      font-size: 20px;
+      margin-bottom: 10px;
+      font-family: "headline-gothic-atf", sans-serif;
+    }
+
+    footer a {
+      display: inline-block;
+    }
+
+    footer img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    footer img:hover {
+      transform: scale(1.1); /* Effetto hover per ingrandire il logo */
+    }
   </style>
 </head>
 <body>
 
-  <!-- Logo con dimensione ridotta -->
-  <img src="ASSETS/LOGO_ROSSO.png" alt="Logo" class="logo">
-  <h1>Congratulations, Roxy!</h1>
-  <p>Fill out your details to get your personalized pass and download our app.</p>
+  <!-- Contenitore del form, logo e testo -->
+  <div class="content">
+    <img src="ASSETS/LOGO_ROSSO.png" alt="Logo" class="logo">
+    <h1>Congratulations, you are Roxy!</h1>
+    <p>Fill out your details to join the ROXY GENERATION.</p>
 
-  <form id="roxy-form">
-    <input type="text" id="first-name" placeholder="First Name" required><br>
-    <input type="text" id="last-name" placeholder="Last Name" required><br>
-    <button type="submit">Submit</button>
-  </form>
+    <form id="roxy-form">
+      <input type="text" id="first-name" placeholder="First Name" required><br>
+      <input type="text" id="last-name" placeholder="Last Name" required><br>
+      <button type="submit">Submit</button>
+    </form>
 
-  <div id="link-container">
-    <h2>Your Pass is Ready!</h2>
-    <a href="https://www.example.com" target="_blank">Download Your Pass</a>
-    <a href="https://www.example.com/app-download" target="_blank">Download the App</a>
+    <div id="link-container">
+      <h2>You are In!</h2>
+      
+      <a href="../roxy/app.html">Download the App</a>
+    </div>
   </div>
 
   <script>
@@ -130,6 +177,16 @@
       linkContainer.style.display = "block";
     });
   </script>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>ROXYGEN 🖤 2025</p>
+      <a href="https://www.instagram.com/roxy/" target="_blank">
+        <img src="/ASSETS/instagram.png" alt="Instagram Logo" style="width: 40px; height: 40px;">
+      </a>
+    </div>
+  </footer>
 
 </body>
 </html>
