@@ -121,31 +121,82 @@ function handleAnswer(value) {
 function showResult() {
   let result;
 
+  // Determina il risultato in base al punteggio
   if (score >= 12) {
     result = results.roxy;
-    // Solo per il caso "ROXY" effettua il reindirizzamento
+
+    // Per il caso "Roxy", reindirizza a result.html
     window.location.href = "result.html";
+    return; // Termina la funzione per evitare l'esecuzione del resto del codice
   } else if (score >= 8) {
     result = results.almost_roxy;
   } else {
     result = results.not_roxy;
   }
 
-  // Mostra il risultato sulla stessa pagina per "Not Roxy" e "Almost Roxy"
-  personalitySpan.textContent = result.title;
-  descriptionSpan.textContent = result.description;
+  // Mostra il risultato a pagina intera per "Almost Roxy" e "Not Roxy"
+  const body = document.body;
 
-  // Nasconde il quiz e mostra il div dei risultati
-  quizContainer.classList.add("hidden");
-  resultDiv.classList.remove("hidden");
+  // Cancella tutti i contenuti attuali della pagina
+  body.innerHTML = '';
+
+  // Aggiungi il font al documento
+  const style = document.createElement('style');
+  style.innerHTML = `
+    @font-face {
+      font-family: 'Headline Gothic ATF';
+      src: url('path/to/headline-gothic-atf.woff2') format('woff2'),
+           url('path/to/headline-gothic-atf.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+    }
+  `;
+  document.head.appendChild(style);
+
+  // Crea il contenitore del risultato
+  const resultContainer = document.createElement('div');
+  resultContainer.style.display = 'flex';
+  resultContainer.style.flexDirection = 'column';
+  resultContainer.style.alignItems = 'center';
+  resultContainer.style.justifyContent = 'center';
+  resultContainer.style.minHeight = '100vh';
+  resultContainer.style.textAlign = 'center';
+  resultContainer.style.backgroundColor = '#D51119'; // Colore di sfondo
+  resultContainer.style.padding = '20px';
+  resultContainer.style.color = '#FEFCE7'; // Colore del testo
+
+  // Aggiungi il titolo del risultato
+  const resultTitle = document.createElement('h1');
+  resultTitle.textContent = result.title;
+  resultTitle.style.fontSize = '5em';
+  resultTitle.style.marginBottom = '20px';
+  resultTitle.style.fontFamily = "'Headline Gothic ATF', sans-serif"; // Applica il font
+
+  // Aggiungi la descrizione del risultato
+  const resultDescription = document.createElement('p');
+  resultDescription.textContent = result.description;
+  resultDescription.style.fontSize = '1em';
+  resultDescription.style.lineHeight = '1.5';
+
+  // Aggiungi tutto al contenitore
+  resultContainer.appendChild(resultTitle);
+  resultContainer.appendChild(resultDescription);
+
+  // Aggiungi il contenitore al body
+  body.appendChild(resultContainer);
 }
 
 // Funzione per mostrare il modulo di personalizzazione e il link per scaricare l'app
 function showCustomizationForm() {
-  // Mostra il form di personalizzazione
   const customPassDiv = document.getElementById("custom-pass");
   const customizePassForm = document.getElementById("customize-pass-form");
   const downloadLink = document.getElementById("download-pass");
+
+  // Crea un link per scaricare l'app
   const appDownloadLink = document.createElement('a');
   appDownloadLink.href = "https://www.example.com/app-download"; // Link alla pagina di download dell'app
   appDownloadLink.textContent = "Scarica la nostra app";
