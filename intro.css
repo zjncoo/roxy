@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: 'headline-gothic-atf', sans-serif;
     background-color: #D51119; /* Rosso */
-    color: white;
+    color: #FEFDE8;
     display: flex;
     justify-content: center;
     align-items: center;

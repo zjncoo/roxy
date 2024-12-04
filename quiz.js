@@ -1,52 +1,50 @@
 const questions = [
-  // Existing questions...
-
   {
     question: "What type of music makes you feel most alive during an event?",
     answers: [
-      { text: "Electronic and techno, I love the energy it creates!", value: "a" },
-      { text: "Jazz or soul, the vibe is more relaxing and deep.", value: "b" },
-      { text: "Rock and alternative, to feel powerful and full of adrenaline.", value: "c" },
+      { text: "Electronic and techno, I live for the bass drops and the chaos!", value: "a" }, // Irriverente
+      { text: "Jazz or soul, it’s like my soundtrack for a deep, meaningful moment.", value: "b" }, // Non irriverente
+      { text: "Rock and alternative, raw energy and powerful riffs fuel me.", value: "c" }, // Neutrale
     ],
   },
   {
     question: "What kind of atmosphere do you prefer at an event?",
     answers: [
-      { text: "A vibrant atmosphere with colorful lights, where every corner is a surprise.", value: "a" },
-      { text: "An intimate, cozy environment with soft lighting and a warm atmosphere.", value: "b" },
-      { text: "Explosive energy with loud music and people dancing everywhere.", value: "c" },
+      { text: "A wild scene with pulsating lights and surprises at every turn—pure chaos, pure fun!", value: "a" }, // Irriverente
+      { text: "A calm, cozy vibe with dim lights, where I can actually hear my thoughts.", value: "b" }, // Non irriverente
+      { text: "A lively space with a great energy that gets everyone moving, but not too over-the-top.", value: "c" }, // Neutrale
     ],
   },
   {
     question: "What style of architecture attracts you most at an event?",
     answers: [
-      { text: "Modern, minimalist spaces with clean lines and a sense of openness.", value: "a" },
-      { text: "Historic, classical architecture, with an elegant timeless feel.", value: "b" },
-      { text: "Futuristic, avant-garde structures that amaze with their boldness.", value: "c" },
+      { text: "Futuristic spaceships, neon bridges, and insane designs that scream ‘bold’!", value: "a" }, // Irriverente
+      { text: "Timeless, elegant buildings with marble and chandeliers—pure class.", value: "b" }, // Non irriverente
+      { text: "Sleek, minimalist spaces where less is more, but everything feels modern.", value: "c" }, // Neutrale
     ],
   },
   {
     question: "What colors would you prefer to dominate at an event?",
     answers: [
-      { text: "Black, silver, and gold, for an elegant and sophisticated touch.", value: "a" },
-      { text: "Warm tones like red, orange, and gold, for a passionate and cozy atmosphere.", value: "b" },
-      { text: "Bright colors like electric blue, purple, and lime green, for a visually stimulating effect.", value: "c" },
+      { text: "Electric blue, neon pink, and lime green—colors that pop and burn into your memory!", value: "a" }, // Irriverente
+      { text: "Warm, earthy tones like terracotta, gold, and crimson—classy and inviting.", value: "b" }, // Non irriverente
+      { text: "Black, silver, and gold—bold but sophisticated, a perfect balance.", value: "c" }, // Neutrale
     ],
   },
   {
     question: "How do you prefer the lighting at an event?",
     answers: [
-      { text: "Neon lights, bright and vivid, creating dramatic contrast.", value: "a" },
-      { text: "Soft, warm lighting that makes the space cozy and relaxed.", value: "b" },
-      { text: "Strobe lights flashing to create a festive and dynamic atmosphere.", value: "c" },
+      { text: "Intense strobes, lasers, and neon chaos that turn the night into a rave.", value: "a" }, // Irriverente
+      { text: "Soft, ambient lighting that feels like a warm embrace.", value: "b" }, // Non irriverente
+      { text: "Dynamic lights that set the tone without overwhelming the senses.", value: "c" }, // Neutrale
     ],
   },
   {
     question: "What type of food and drinks do you expect at an exclusive event?",
     answers: [
-      { text: "Innovative cocktails and gourmet finger food.", value: "a" },
-      { text: "Classic dishes, but with fresh and high-quality ingredients.", value: "b" },
-      { text: "Street food and energizing drinks, for a non-stop party.", value: "c" },
+      { text: "Experimental cocktails served in test tubes and snacks that look like alien food.", value: "a" }, // Irriverente
+      { text: "A beautifully plated three-course meal with the finest ingredients.", value: "b" }, // Non irriverente
+      { text: "Gourmet street food with a twist—unexpected flavors, but still approachable.", value: "c" }, // Neutrale
     ],
   },
 ];

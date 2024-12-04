@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #D51119;
-  color: white;
+  color: #FEFDE8;
 }
 
 #quiz-container {
@@ -67,8 +67,8 @@ body {
   font-family:'Inter', sans-serif;
   padding: 15px 20px; /* Spaziatura interna */
   background-color: transparent; /* Sfondo trasparente */
-  color: white; /* Colore del testo */
-  border: 2px solid white; /* Bordo bianco */
+  color: #FEFDE8; /* Colore del testo */
+  border: 2px solid #FEFDE8; /* Bordo bianco */
   border-radius: 0; /* Bordo quadrato */
   cursor: pointer; /* Cambia il cursore a "mano" */
   width: 60%; /* I bottoni occupano tutta la larghezza del contenitore */
@@ -78,13 +78,13 @@ body {
 }
 
 .quiz-button:hover {
-  background-color: white; /* Sfondo bianco al passaggio del mouse */
+  background-color: #FEFDE8; /* Sfondo bianco al passaggio del mouse */
   color: #D32F2F; /* Cambia il colore del testo */
 }
 
 .quiz-button:active {
   background-color: #D32F2F; /* Sfondo rosso scuro al clic */
-  color: white; /* Colore del testo bianco */
+  color: #FEFDE8; /* Colore del testo bianco */
 }
 
 .hidden {
@@ -95,7 +95,7 @@ footer {
   text-align: center;
   padding: 10px;
   background-color: #1E1E1E;
-  color: white;
+  color: #FEFDE8;
 }
 
 #download-pass {
@@ -139,7 +139,7 @@ footer {
 #customize-pass-form button {
   padding: 10px;
   background-color: #D32F2F;
-  color: white;
+  color: #FEFDE8;
   border: none;
   font-size: 16px;
   cursor: pointer;
@@ -164,7 +164,7 @@ footer .highlight {
 
 footer {
   background-color: #D51119;
-  color: white;
+  color: #FEFDE8;
   text-align: center;
   padding: 20px 0;
   position: relative;
